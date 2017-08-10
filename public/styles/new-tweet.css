@@ -26,8 +26,78 @@ input {
   margin-left: 2px;
 }
 
-span {
+.counter {
   margin-top: 10px;
   margin-right: 2px;
   float: right;
 }
+
+.red {
+  color: red;
+}
+
+#all-tweets {
+  background-color: white;
+  margin: 2em;
+}
+
+article {
+  height: 180px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+article header {
+  background-color: #eee;
+  padding: 4px;
+  border-radius: 10px 10px 0 0;
+  height: 60px;
+}
+
+article header img {
+  float: left;
+  border-radius: 10px;
+}
+
+article header h3 {
+  margin: 0 6px;
+  display: inline;
+  color: green;
+}
+
+article header span {
+  float: right;
+  margin: 10px 5px 10px 0;
+}
+
+article div {
+  height: 80px;
+  padding: 5px;
+}
+
+article footer {
+  border-top: 1px solid grey;
+  height: 10px;
+}
+
+article footer span {
+  padding: 10px 0 0 10px;
+  float: left;
+}
+
+article footer div {
+  display: inline;
+  position: relative;
+  float: right;
+  margin: 5px;
+}
+
+article footer div a {
+  color: transparent;
+}
+
+
+article footer div a:hover {
+  color: green;
+}
+
