@@ -6,7 +6,7 @@
    */
 
 
-
+  /*
   var tweetData = {
     "user": {
       "name": "Newton",
@@ -22,6 +22,7 @@
     },
     "created_at": 1461116232227
   };
+  */
 
   /*
   var data = [
@@ -77,6 +78,7 @@
   // Test / driver code (temporary)
   // console.log($tweet); // to see what it looks like
 
+
   var timeStamp = function convertTime (milliseconds) {
       var date = new Date(milliseconds * 1000);
       var hours = date.getHours();
@@ -115,7 +117,7 @@
   function renderTweets(tweets){
     tweets.forEach(function (tweet) {
       var tweetEl = createTweetElement(tweet);
-      $('#all-tweets').append(tweetEl);
+      $('#all-tweets').prepend(tweetEl);
     });
   }
 
@@ -161,12 +163,10 @@ $( document ).ready(function(){
           $.ajax({
             url: '/tweets',
             method: 'POST',
-            data: $(this).serialize()
-            //success: renderTweets(myData),
-            //console.log(success);
-            //$('.container').replaceWith(success);
-          }).done(function () {
-              //slider();
+            data: $(this).serialize(),
+            //success: renderTweets,
+            //error: function (x, y, z) { console.log(x, y, z);}
+          }).done(function (x) {
               getTweets();
             });
         }
@@ -185,3 +185,4 @@ $( document ).ready(function(){
 
 
 })
+

@@ -32,14 +32,16 @@ module.exports = function(DataHelpers) {
       created_at: Date.now()
     };
 
-    DataHelpers.saveTweet(tweet, (err) => {
+    DataHelpers.saveTweet(tweet, (err, x) => {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
         res.status(201).send();
       }
     });
+
   });
+
 
   return tweetsRoutes;
 
