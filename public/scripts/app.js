@@ -6,6 +6,7 @@
    */
 
 
+  // function for creating a time stamp on tweets in yyyy/mm/dd format
   var timeStamp = function convertTime (milliseconds) {
 
       var date = new Date(milliseconds);
@@ -18,7 +19,7 @@
 
     }
 
-
+  // function for creating a new Tweet HTML element
   function createTweetElement (tweetData) {
 
     var newTweet = (`
@@ -44,6 +45,7 @@
     return `${newTweet}`;
   }
 
+  // function for rendering the tweets container
   function renderTweets(tweets){
     var $tweetContainer = $('#all-tweets');
     $tweetContainer.empty();
@@ -59,6 +61,7 @@
 
 $( document ).ready(function(){
 
+  // function for getting the tweets
   function getTweets() {
     $.ajax({
       url: '/tweets',
@@ -66,6 +69,7 @@ $( document ).ready(function(){
       }).then(renderTweets);
   }
 
+  // function for loading the tweets
   function loadTweets() {
     $('form').on('submit', function (event) {
 
@@ -73,12 +77,13 @@ $( document ).ready(function(){
 
         let errorVal = $('textarea').val();
 
-
+        // if the tweet is empty
         if ((errorVal === "") || (errorVal === null)) {
           alert("Please enter a valid tweet");
           return;
         }
 
+        // if the tweet is longer than 140 characters
         else if (errorVal.length > 140) {
           alert("Tweet is too long - please shorten your tweet");
           return;
@@ -88,9 +93,7 @@ $( document ).ready(function(){
           $.ajax({
             url: '/tweets',
             method: 'POST',
-            data: $(this).serialize(),
-            //success: renderTweets,
-            //error: function (x, y, z) { console.log(x, y, z);}
+            data: $(this).serialize()
           }).done(function (x) {
               getTweets();
             });
@@ -98,19 +101,17 @@ $( document ).ready(function(){
     });
   }
 
-
+  // event handler for toggling compose button
   $('#compose').click(function () {
 
-    //event.preventDefault();
       $('.new-tweet').slideToggle(200, loadTweets());
+
     });
 
 
   getTweets();
 
   loadTweets();
-
-  //likeTweets();
 
 
 })

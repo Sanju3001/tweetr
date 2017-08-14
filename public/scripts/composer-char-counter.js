@@ -1,9 +1,7 @@
+// function for changing character counter color
+
 
 $( document ).ready(function(){
-
-  //console.log("let's rock");
-
-
 
   $('textarea').on('keyup', function (){
 
@@ -18,9 +16,6 @@ $( document ).ready(function(){
     }
 
   });
-
-
-
 
 });
 
