@@ -1,29 +1,35 @@
 
 .new-tweet {
   padding: 0 10px 0 10px;
-  background-color: #eee;
+  background-color: #E8E1E2;
   border: 1px solid grey;
   border-radius: 10px;
   margin: 0 2em;
-  height: 160px;
+  height: 180px;
+  flex-grow: 1;
 }
 
 h2 {
   border-bottom: 1px solid black;
   text-align: left;
   margin-top: 10px;
+  color: green;
 }
 
 textarea {
   padding: 5px;
-  margin: auto;
+  margin: -5px auto 5px;
   display: block;
-  width: 360px;
+  width: 100%;
+  height: 80px;
 }
 
 input {
-  margin-top: 6px;
+  margin-top: 2px;
   margin-left: 2px;
+  background-color: #4ECCFF;
+  border-radius: 4px;
+  color: green;
 }
 
 .counter {
@@ -84,6 +90,19 @@ article footer span {
   padding: 10px 0 0 10px;
   float: left;
 }
+
+/*
+article footer button {
+  float: left;
+  margin: 5px 0 0 40px;
+  border-radius: 6px;
+  color: orange;
+}
+
+#counter {
+  float: left;
+}
+*/
 
 article footer div {
   display: inline;

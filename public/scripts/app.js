@@ -110,6 +110,8 @@ $( document ).ready(function(){
 
   loadTweets();
 
+  //likeTweets();
+
 
 })
 

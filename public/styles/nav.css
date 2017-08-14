@@ -2,33 +2,32 @@
 
 #nav-bar {
   position: fixed;
-  height: 80px;
+  height: 94px;
   width: 100%;
-  background-color: #00a087;
-  padding: 0 2em;
+  background-color: #4ECCFF;
+  padding: 0.3em 1em;
+  border: 2px groove orange;
+  display: flex;
+  justify-content: space-between;
  }
 
  #nav-bar .logo {
   height: 80px;
   width: 80px;
-  float: left;
-  margin-right: 10px;
  }
 
  #nav-bar .header {
-  float: left;
   line-height: 200%;
   color: #e8fdff;
-  margin-top: 5px;
+  padding-top: 5px;
   font-size: xx-large;
  }
 
  #compose {
-  float: right;
-  margin-top: 15px;
-  height: 50px;
+  margin: 10px 1px 0 1px;
+  height: 60px;
   width: 100px;
-  background-color: #eee;
+  background-color: orange;
   border-radius: 10px;
   color: green;
   font-size: large;
@@ -36,4 +35,8 @@
 
  #compose:hover {
   background-color: white;
+ }
+
+ #nav-bar i {
+  display: block;
  }
